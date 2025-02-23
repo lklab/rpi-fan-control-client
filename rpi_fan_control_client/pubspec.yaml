@@ -1,5 +1,5 @@
-name: rpi_fan_control_client
-description: "A new Flutter project."
+name: fan_controller
+description: "Raspberry pi fan controller"
 publish_to: 'none'
 version: 0.1.0
 
@@ -18,3 +18,6 @@ dev_dependencies:
 
 flutter:
   uses-material-design: true
+
+  assets:
+    - assets/data/

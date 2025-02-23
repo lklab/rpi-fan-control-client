@@ -1,7 +1,7 @@
 import 'dart:async';
 import 'package:grpc/grpc.dart';
 
-import 'package:rpi_fan_control_client/proto/generated/control.pbgrpc.dart' as control_pb;
+import 'package:fan_controller/proto/generated/control.pbgrpc.dart' as control_pb;
 
 class FanControlClient {
   late control_pb.FanControlServiceClient _client;
@@ -25,6 +25,7 @@ class FanControlClient {
   }
 
   Future<control_pb.FanConfigResponse> setConfig(control_pb.FanConfigRequest config) async {
+    config.key = key;
     return await _client.setFanConfig(config);
   }
 
